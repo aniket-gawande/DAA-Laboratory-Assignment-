@@ -1,0 +1,135 @@
+PS C:\DAA Assignment\Assignment no 1> cd "c:\DAA Assignment\Assignment no 1\" ; if ($?) { g++ MergeDataSet.cpp -o MergeDataSet } ; if ($?) { .\MergeDataSet }
+Transactions sorted by date; fields shown alphabetically by column name.
+Top 10 transactions (earliest first):
+
+Transaction 1
+  CustomerID: 409768
+  DiscountApplied(%): 16.66939431
+  PaymentMethod: Cash
+  Price: 67.85646757
+  ProductCategory: Clothing
+  ProductID: C
+  Quantity: 7
+  StoreLocation: 225 Byrd Club Suite 330
+Schmittbury, WV 64050
+  TotalAmount: 395.816438
+  TransactionDate: 4/30/2023 0:03
+
+Transaction 2
+  CustomerID: 63344
+  DiscountApplied(%): 10.91066066
+  PaymentMethod: Debit Card
+  Price: 84.16385555
+  ProductCategory: Electronics
+  ProductID: D
+  Quantity: 9
+  StoreLocation: 0153 Miller Squares Suite 416
+Adrianborough, NC 36754
+  TotalAmount: 674.8292058
+  TransactionDate: 4/30/2023 1:16
+
+Transaction 3
+  CustomerID: 571484
+  DiscountApplied(%): 8.24235243
+  PaymentMethod: PayPal
+  Price: 44.35792689
+  ProductCategory: Electronics
+  ProductID: A
+  Quantity: 3
+  StoreLocation: 47047 Ortiz Ways Apt. 772
+West Rachel, MH 18749
+  TotalAmount: 122.1053707
+  TransactionDate: 4/30/2023 2:55
+
+Transaction 4
+  CustomerID: 172644
+  DiscountApplied(%): 6.705475045
+  PaymentMethod: Cash
+  Price: 69.18209621
+  ProductCategory: Electronics
+  ProductID: C
+  Quantity: 2
+  StoreLocation: PSC 6111, Box 2376
+APO AP 38938
+  TotalAmount: 129.086216
+  TransactionDate: 4/30/2023 3:33
+
+Transaction 5
+  CustomerID: 580097
+  DiscountApplied(%): 16.82736262
+  PaymentMethod: PayPal
+  Price: 79.73056077
+  ProductCategory: Books
+  ProductID: C
+  Quantity: 5
+  StoreLocation: 61778 Karina Islands
+North Elizabethland, MS 57140
+  TotalAmount: 331.5700509
+  TransactionDate: 4/30/2023 4:26
+
+Transaction 6
+  CustomerID: 546742
+  DiscountApplied(%): 14.45894959
+  PaymentMethod: Cash
+  Price: 73.27607984
+  ProductCategory: Home Decor
+  ProductID: C
+  Quantity: 1
+  StoreLocation: 051 Mary Stream Suite 783
+West Maryhaven, DE 06407
+  TotalAmount: 62.6811284
+  TransactionDate: 4/30/2023 5:11
+
+Transaction 7
+  CustomerID: 685873
+  DiscountApplied(%): 8.799144174
+  PaymentMethod: PayPal
+  Price: 42.09359312
+  ProductCategory: Clothing
+  ProductID: A
+  Quantity: 8
+  StoreLocation: PSC 5907, Box 8485
+APO AE 53182
+  TotalAmount: 307.1177374
+  TransactionDate: 4/30/2023 5:24
+
+Transaction 8
+  CustomerID: 996116
+  DiscountApplied(%): 10.557164
+  PaymentMethod: Cash
+  Price: 80.53736786
+  ProductCategory: Books
+  ProductID: B
+  Quantity: 9
+  StoreLocation: 16742 Nguyen Tunnel
+Lake Richard, WV 14455
+  TotalAmount: 648.3141527
+  TransactionDate: 4/30/2023 7:44
+
+Transaction 9
+  CustomerID: 12170
+  DiscountApplied(%): 8.115057813
+  PaymentMethod: PayPal
+  Price: 99.82986422
+  ProductCategory: Books
+  ProductID: C
+  Quantity: 9
+  StoreLocation: 7559 Aguirre Square Apt. 479
+Brewerstad, NM 22528
+  TotalAmount: 825.5575172
+  TransactionDate: 4/30/2023 8:39
+
+Transaction 10
+  CustomerID: 211708
+  DiscountApplied(%): 9.765537151
+  PaymentMethod: Credit Card
+  Price: 61.14012611
+  ProductCategory: Books
+  ProductID: A
+  Quantity: 6
+  StoreLocation: 75530 Shane Flats Suite 335
+Collinfurt, NC 41063
+  TotalAmount: 331.0167863
+  TransactionDate: 4/30/2023 10:40
+
+PS C:\DAA Assignment\Assignment no 1> 

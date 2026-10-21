@@ -1,50 +1,76 @@
-
-PS C:\DAA Assignment\Assignment no 6> cd "c:\DAA Assignment\Assignment no 6\" ; if ($?) { g++ 01knapsack.cpp -o 01knapsack } ; if ($?) { .\01knapsack }
+PS C:\DAA Assignment\Assignment no 1> cd "c:\DAA Assignment\Assignment no 6\" ; if ($?) { g++ 01knapsack.cpp -o 01knapsack } ; if ($?) { .\01knapsack }
 ========================================
  DISASTER RELIEF RESOURCE ALLOCATION
 ========================================
-Enter number of relief items: 4
+Enter number of relief items: 5
 
 Enter item name, weight (kg), and utility.
 Use names without spaces, e.g., FirstAidKit.
 
-Item 1 name: food 10 100
-Weight (kg): Utility value: 
-Item 2 name: firstaidkit 20 1000
-Weight (kg): Utility value: 
-Item 3 name: water 25
-Weight (kg): Utility value: 3500
+Item 1 name: Water
+Weight (kg): 20
+Utility value: 100
 
-Item 4 name: vegetables
-Weight (kg): 30
+Item 2 name: First aid
+Weight (kg): Utility value: Error: Weight must be positive and utility must be non-negative.
+PS C:\DAA Assignment\Assignment no 6> cd "c:\DAA Assignment\Assignment no 6\" ; if ($?) { g++ 01knapsack.cpp -o 01knapsack } ; if ($?) { .\01knapsack }
+========================================
+ DISASTER RELIEF RESOURCE ALLOCATION
+========================================
+Enter number of relief items: 5
+
+Enter item name, weight (kg), and utility.
+Use names without spaces, e.g., FirstAidKit.
+
+Item 1 name: Water
+Weight (kg): 10
+Utility value: 200
+
+Item 2 name: food
+Weight (kg): 20
+Utility value: 220
+
+Item 3 name: medicine
+Weight (kg): 15
 Utility value: 500
 
-Enter truck capacity (kg): 55 
+Item 4 name: clothes
+Weight (kg): 10
+Utility value: 75
+
+Item 5 name: Stationery
+Weight (kg): 35
+Utility value: 50
+
+Enter truck capacity (kg): 100
 
 --- Recursive Approach ---
-Maximum Utility: 4600
+Maximum Utility: 1045
 
 --- Memoization Approach ---
-Maximum Utility: 4600
+Maximum Utility: 1045
 
 --- Tabulation Approach ---
 
 Dynamic Programming Table:
-Items\Capacity  0       1       2       3       4       5       6       7       89       10      11      12      13      14      15      16      17      18      19       20      21      22      23      24      25      26      27      28      29       30      31      32      33      34      35      36      37      38      39       40      41      42      43      44      45      46      47      48      49       50      51      52      53      54      55
-0               0       0       0       0       0       0       0       0       00       0       0       0       0       0       0       0       0       0       00       0       0       0       0       0       0       0       0       0       00       0       0       0       0       0       0       0       0       0       00       0       0       0       0       0       0       0       0       0       00       0       0
-1               0       0       0       0       0       0       0       0       00       100     100     100     100     100     100     100     100     100     100      100     100     100     100     100     100     100     100     100     100      100     100     100     100     100     100     100     100     100     100      100     100     100     100     100     100     100     100     100     100      100     100     100     100     100     100
-2               0       0       0       0       0       0       0       0       00       100     100     100     100     100     100     100     100     100     100      1000    1000    1000    1000    1000    1000    1000    1000    1000    1000     1100    1100    1100    1100    1100    1100    1100    1100    1100    1100     1100    1100    1100    1100    1100    1100    1100    1100    1100    1100     1100    1100    1100    1100    1100    1100
-3               0       0       0       0       0       0       0       0       00       100     100     100     100     100     100     100     100     100     100      1000    1000    1000    1000    1000    3500    3500    3500    3500    3500     3500    3500    3500    3500    3500    3600    3600    3600    3600    3600     3600    3600    3600    3600    3600    4500    4500    4500    4500    4500     4500    4500    4500    4500    4500    4600
-4               0       0       0       0       0       0       0       0       00       100     100     100     100     100     100     100     100     100     100      1000    1000    1000    1000    1000    3500    3500    3500    3500    3500     3500    3500    3500    3500    3500    3600    3600    3600    3600    3600     3600    3600    3600    3600    3600    4500    4500    4500    4500    4500     4500    4500    4500    4500    4500    4600
+Items\Capacity  0       1       2       3       4       5       6       7       8   910      11      12      13      14      15      16      17      18      19      20  21       22      23      24      25      26      27      28      29      30      31  32       33      34      35      36      37      38      39      40      41      42  43       44      45      46      47      48      49      50      51      52      53  54       55      56      57      58      59      60      61      62      63      64  65       66      67      68      69      70      71      72      73      74      75  76       77      78      79      80      81      82      83      84      85      86  87       88      89      90      91      92      93      94      95      96      97  98       99      100
+0               0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0       0       0       0       0   00       0       0       0       0       0       0
+1               0       0       0       0       0       0       0       0       0   0200     200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200     200     200     200     200     200     200     200     200 200      200     200
+2               0       0       0       0       0       0       0       0       0   0200     200     200     200     200     200     200     200     200     200     220 220      220     220     220     220     220     220     220     220     420     420 420      420     420     420     420     420     420     420     420     420     420 420      420     420     420     420     420     420     420     420     420     420 420      420     420     420     420     420     420     420     420     420     420 420      420     420     420     420     420     420     420     420     420     420 420      420     420     420     420     420     420     420     420     420     420 420      420     420     420     420     420     420     420     420     420     420 420      420     420
+3               0       0       0       0       0       0       0       0       0   0200     200     200     200     200     500     500     500     500     500     500 500      500     500     500     700     700     700     700     700     700     700 700      700     700     720     720     720     720     720     720     720     720 720      720     920     920     920     920     920     920     920     920     920 920      920     920     920     920     920     920     920     920     920     920 920      920     920     920     920     920     920     920     920     920     920 920      920     920     920     920     920     920     920     920     920     920 920      920     920     920     920     920     920     920     920     920     920 920      920     920
+4               0       0       0       0       0       0       0       0       0   0200     200     200     200     200     500     500     500     500     500     500 500      500     500     500     700     700     700     700     700     700     700 700      700     700     775     775     775     775     775     775     775     775 775      775     920     920     920     920     920     920     920     920     920 920      995     995     995     995     995     995     995     995     995     995 995      995     995     995     995     995     995     995     995     995     995 995      995     995     995     995     995     995     995     995     995     995 995      995     995     995     995     995     995     995     995     995     995 995      995     995
+5               0       0       0       0       0       0       0       0       0   0200     200     200     200     200     500     500     500     500     500     500 500      500     500     500     700     700     700     700     700     700     700 700      700     700     775     775     775     775     775     775     775     775 775      775     920     920     920     920     920     920     920     920     920 920      995     995     995     995     995     995     995     995     995     995 995      995     995     995     995     995     995     995     995     995     995 995      995     995     995     995     995     995     995     995     995     995 995      995     995     1045    1045    1045    1045    1045    1045    1045    10451045     1045    1045
 
 Selected Relief Items:
-food | Weight: 10 kg | Utility: 100
-firstaidkit | Weight: 20 kg | Utility: 1000
-water | Weight: 25 kg | Utility: 3500
+Water | Weight: 10 kg | Utility: 200
+food | Weight: 20 kg | Utility: 220
+medicine | Weight: 15 kg | Utility: 500
+clothes | Weight: 10 kg | Utility: 75
+Stationery | Weight: 35 kg | Utility: 50
 
-Maximum Total Utility: 4600
-Total Weight: 55 kg
-Remaining Capacity: 0 kg
+Maximum Total Utility: 1045
+Total Weight: 90 kg
+Remaining Capacity: 10 kg
 
 ========== COMPLEXITY ANALYSIS ==========
 Recursive Time: O(2^N)
@@ -52,5 +78,5 @@ Memoization Time: O(N * W)
 Tabulation Time: O(N * W)
 DP Space Complexity: O(N * W)
 
-Final Optimal Utility: 4600
+Final Optimal Utility: 1045
 PS C:\DAA Assignment\Assignment no 6> 
