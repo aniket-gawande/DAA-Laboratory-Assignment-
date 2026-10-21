@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <iostream>
-#include <map>
 #include <set>
 #include <string>
 #include <vector>
@@ -8,6 +7,18 @@
 using namespace std;
 
 using Graph = vector<set<int>>;
+
+// These names make the graph colors easier to understand as exam periods.
+const vector<string> COLOR_NAMES = {
+    "Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Brown"
+};
+
+string colorName(int color) {
+    if (color < static_cast<int>(COLOR_NAMES.size())) {
+        return COLOR_NAMES[color];
+    }
+    return "Color " + to_string(color + 1);
+}
 
 struct Course {
     string name;
@@ -215,10 +226,10 @@ void printSchedule(
     cout << algorithm << " TIMETABLE\n";
     cout << "============================================================\n";
     cout << "Number of exam slots (colors) used: " << schedule.slotCount << "\n";
-    cout << "Each slot is one exam period. Courses in a slot have no shared-student conflicts.\n";
+    cout << "Each color represents an exam time slot. Courses in the same slot have no shared-student conflicts.\n";
 
     for (int slot = 0; slot < schedule.slotCount; ++slot) {
-        cout << "\nSLOT " << slot + 1 << "\n";
+        cout << "\n" << colorName(slot) << " (TIME SLOT " << slot + 1 << ")\n";
         cout << "------------------------------------------------------------\n";
         cout << "Course\tStudents\tRoom\tCapacity\tSeats left\n";
         bool hasCourse = false;
@@ -361,6 +372,19 @@ int main() {
         cout << '\n';
     }
     cout << "Total unique conflict pairs: " << conflictCount << '\n';
+    cout << "\nGraph structure (each line is an edge between conflicting courses):\n";
+    if (conflictCount == 0) {
+        cout << "No edges; all courses are independent vertices.\n";
+    } else {
+        for (int i = 0; i < static_cast<int>(courses.size()); ++i) {
+            for (int neighbor : graph[i]) {
+                if (i < neighbor) {
+                    cout << "  " << courses[i].name << " ---- "
+                         << courses[neighbor].name << '\n';
+                }
+            }
+        }
+    }
 
     Schedule greedy = greedyColoring(
         graph,
